@@ -29,7 +29,7 @@ foreach (string sor in sorok)
         }
         else
         {
-            Console.WriteLine($"[HIBA] A(z) {azonosito} azonosítójú eszköz adatai hibásak, átugorva!");
+            Console.WriteLine($"[HIBA] A(z) {azonosito} azonosítójú eszköz adatai hibásak, átugorva!\n");
         }
     }
     else if (darab.Length >= 5)
@@ -43,12 +43,14 @@ foreach (string sor in sorok)
         }
         else
         {
-            Console.WriteLine($"[HIBA] A(z) {azonosito} azonosítójú eszköz adatai hibásak, átugorva!");
+            Console.WriteLine($"[HIBA] A(z) {azonosito} azonosítójú eszköz adatai hibásak, átugorva!\n");
         }
     }
 }
+    Console.WriteLine($"Ingatlannyilvántartás:\r");
 foreach (var ingatlans in ingatlan)
 {
     Console.WriteLine(ingatlans.ToString());
 }
-Console.WriteLine($"Regisztrált ingatlanok száma a rendszerben: {ingatlanok.OsszesRegisztraltIngatlan} db");
+Console.WriteLine($"\nRegisztrált ingatlanok száma a rendszerben: {ingatlanok.OsszesRegisztraltIngatlan} db");
+
