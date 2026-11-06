@@ -14,23 +14,31 @@ namespace Ingatlanok
         public string Kategoria { get; set; }
         public int AlapteruletM2
         {
-            get;
+            get { return alapteruletM2; }
             set
             {
                 if (value < 10)
                 {
-                    value = 10;
+                    alapteruletM2 = 10;
+                }
+                else
+                {
+                    alapteruletM2 = value;
                 }
             }
         }
         public int ArEzerFt
         {
-            get;
+            get { return arEzerFt; }
             set
             {
                 if (value < 0)
                 {
-                    value = 0;
+                    arEzerFt = 0;
+                }
+                else
+                {
+                    arEzerFt = value;
                 }
             }
         }
@@ -57,7 +65,7 @@ namespace Ingatlanok
         }
         public double NegyzetmeterAr()
         {
-            return (ArEzerFt * 1000.0) / AlapteruletM2;
+            return ArEzerFt * 1000.0 / AlapteruletM2;
         }
 
     }
